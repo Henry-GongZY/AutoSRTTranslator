@@ -1,0 +1,13 @@
+[project]
+name = "auto-srt-translator"
+version = "0.1.0"
+description = "A tool for translating SRT subtitle files using various translation backends"
+requires-python = ">=3.10"
+dependencies = [
+    "google-cloud-translate==3.12.0",
+    "python-dotenv==1.0.0",
+    "google-genai",
+    "setuptools",
+    "google-cloud-core",
+    "google-api-core",
+]
