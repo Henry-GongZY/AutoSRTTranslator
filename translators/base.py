@@ -23,6 +23,7 @@ class BaseTranslator(ABC):
     #     """Translate multiple texts in batch."""
     #     return [self.translate(text, target_language, source_language) for text in texts]
 
+
 class TranslatorFactory:
     """Factory class for creating translator instances."""
     

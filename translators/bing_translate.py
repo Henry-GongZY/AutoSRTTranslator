@@ -1,6 +1,6 @@
 import requests
 from typing import List
-from . import BaseTranslator, TranslationResult, TranslatorFactory
+from .base import BaseTranslator, TranslationResult, TranslatorFactory
 
 class BingTranslator(BaseTranslator):
     """Microsoft Azure Translator API implementation."""

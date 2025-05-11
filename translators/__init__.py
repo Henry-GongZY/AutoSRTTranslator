@@ -1,10 +1,12 @@
-from .base import BaseTranslator, TranslationResult, TranslatorFactory
+from .base import TranslatorFactory
 
 # Import all translator implementations
 from .google_translate import GoogleTranslator
 from .bing_translate import BingTranslator
 from .yandex_translate import YandexTranslator
-from .llm_translate import OpenAITranslator, GeminiTranslator, DeepSeekTranslator
+from .openai_translate import OpenAITranslator
+from .gemini_translate import GeminiTranslator
+from .deepseek_translate import DeepSeekTranslator
 
 # Register all available translators
 TranslatorFactory.register('google', GoogleTranslator)

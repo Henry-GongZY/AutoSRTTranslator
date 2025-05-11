@@ -2,13 +2,16 @@ import re
 import json
 from typing import List, Dict, Optional
 from dataclasses import dataclass
-from translators import TranslatorFactory, TranslationResult
+from translators import TranslatorFactory
+from translators.base import TranslationResult
+
 
 @dataclass
 class SubtitleEntry:
     index: int
     timestamp: str
     content: str
+
 
 class SRTTranslator:
     def __init__(self, translator_name: str, **translator_config):
@@ -80,22 +83,23 @@ class SRTTranslator:
 
 def main():
     # Example usage with different translation backends
-    
+
     # Using Google Translate
     # google_translator = SRTTranslator('google', api_key='YOUR_GOOGLE_API_KEY')
     # google_translator.translate_srt('input.srt', 'output_google.srt', 'zh')
-    
+
     # # Using Bing Translate
     # bing_translator = SRTTranslator('bing', api_key='YOUR_AZURE_API_KEY', region='global')
     # bing_translator.translate_srt('input.srt', 'output_bing.srt', 'zh')
-    
+
     # # Using OpenAI
     # openai_translator = SRTTranslator('openai', api_key='YOUR_OPENAI_API_KEY')
     # openai_translator.translate_srt('input.srt', 'output_openai.srt', 'zh')
-    
+
     # Using Gemini
-    gemini_translator = SRTTranslator('gemini', api_key='AIzaSyCjbu2s2Ye1OO11AHNXZ8BHY6p4esLbArU')
+    gemini_translator = SRTTranslator('gemini', api_key='')
     gemini_translator.translate_srt('input.srt', 'output_gemini.srt', 'zh')
+
 
 if __name__ == '__main__':
     main()
